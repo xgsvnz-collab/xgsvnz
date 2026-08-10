@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="color-scheme" content="only dark">
+    <title>Pempek Haris & Susu Jahe Merah Sadulur - Order Online</title>
+    
+    <!-- Lucide Icons & Fonts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            color-scheme: only dark;
+            --primary: #fbbf24;
+            --primary-glow: rgba(251, 191, 36, 0.4);
+            --dana-blue: #118eea;
+            --dana-glow: rgba(17, 142, 234, 0.5);
+            --bg-dark: #0b0f17;
+            --card-bg: rgba(23, 32, 51, 0.75);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background: #070a10 linear-gradient(180deg, #0f172a 0%, #070a10 100%) !important;
+            color: var(--text-main) !important;
+            min-height: 100vh;
+            padding-bottom: 110px;
+            overflow-x: hidden;
+        }
+
+        /* HEADER & NAVIGATION ANIMATED */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 90;
+            background: rgba(11, 15, 23, 0.85) !important;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-glass);
+            padding: 14px 20px;
+            animation: slideDown 0.6s var(--ease-out);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .nav-container {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            transition: transform 0.3s var(--ease-spring);
+        }
+
+        .brand:hover {
+            transform: scale(1.03);
+        }
+
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            box-shadow: 0 4px 12px var(--primary-glow);
+            animation: pulseGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 8px var(--primary-glow); transform: rotate(0deg); }
+            100% { box-shadow: 0 0 22px rgba(251, 191, 36, 0.8); transform: rotate(3deg); }
+        }
+
+        .brand-text h2 {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.1;
+        }
+
+        .brand-text span {
+            font-size: 0.65rem;
+            color: var(--primary);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        /* TOMBOL DANA ANIMATED */
+        .dana-trigger {
+            background: rgba(17, 142, 234, 0.15) !important;
+            border: 1px solid rgba(17, 142, 234, 0.4) !important;
+            color: #38bdf8 !important;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            text-decoration: none;
+            transition: all 0.3s var(--ease-spring);
+            box-shadow: 0 0 10px rgba(17, 142, 234, 0.2);
+            animation: pulseDana 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseDana {
+            0% { box-shadow: 0 0 6px rgba(17, 142, 234, 0.2); }
+            100% { box-shadow: 0 0 18px rgba(56, 189, 248, 0.7); }
+        }
+
+        .dana-trigger:hover {
+            background: rgba(17, 142, 234, 0.35) !important;
+            transform: translateY(-2px) scale(1.05);
+            color: #fff !important;
+        }
+
+        .dana-trigger:active {
+            transform: scale(0.9);
+        }
+
+        .cart-trigger {
+            position: relative;
+            background: rgba(251, 191, 36, 0.12) !important;
+            border: 1px solid rgba(251, 191, 36, 0.3) !important;
+            color: var(--primary) !important;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s var(--ease-spring);
+        }
+
+        .cart-trigger:hover {
+            background: rgba(251, 191, 36, 0.25) !important;
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 0 15px var(--primary-glow);
+        }
+
+        .cart-trigger:active {
+            transform: scale(0.88);
+        }
+
+        .cart-badge {
+            background: var(--primary) !important;
+            color: #000 !important;
+            border-radius: 10px;
+            padding: 2px 6px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            transition: transform 0.3s var(--ease-spring);
+        }
+
+        .cart-badge.bump {
+            animation: bump 0.4s var(--ease-spring);
+        }
+
+        @keyframes bump {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.6); }
+            100% { transform: scale(1); }
+        }
+
+        /* HERO & BODY */
+        .app-body {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero-title {
+            font-size: 1.55rem;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 6px;
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 0.6s var(--ease-out) 0.1s both;
+        }
+
+        .hero-sub {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.6s var(--ease-out) 0.2s both;
+        }
+
+        /* SEARCH BAR */
+        .search-box {
+            position: relative;
+            margin-bottom: 16px;
+            animation: fadeInUp 0.6s var(--ease-out) 0.3s both;
+        }
+
+        .search-box input {
+            width: 100%;
+            background: rgba(23, 32, 51, 0.85) !important;
+            border: 1px solid var(--border-glass) !important;
+            padding: 12px 16px 12px 42px;
+            border-radius: 16px;
+            color: #fff !important;
+            font-size: 0.88rem;
+            outline: none;
+            transition: all 0.3s var(--ease-spring);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary) !important;
+            box-shadow: 0 0 20px var(--primary-glow);
+            transform: scale(1.01);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            width: 18px;
+            height: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus + i {
+            color: var(--primary);
+            transform: translateY(-50%) scale(1.2) rotate(10deg);
+        }
+
+        /* FILTER CHIPS */
+        .filter-scroll {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            scrollbar-width: none;
+            animation: fadeInUp 0.6s var(--ease-out) 0.4s both;
+        }
+
+        .filter-scroll::-webkit-scrollbar { display: none; }
+
+        .chip-filter {
+            background: rgba(255, 255, 255, 0.04) !important;
+            border: 1px solid var(--border-glass) !important;
+            color: var(--text-muted) !important;
+            padding: 10px 18px;
+            border-radius: 30px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.3s var(--ease-spring);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .chip-filter:hover {
+            background: rgba(255, 255, 255, 0.08) !important;
+            transform: translateY(-2px);
+            color: #fff !important;
+        }
+
+        .chip-filter:active {
+            transform: scale(0.92);
+        }
+
+        .chip-filter.active {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%) !important;
+            color: #000 !important;
+            border-color: var(--primary) !important;
+            font-weight: 800;
+            box-shadow: 0 4px 18px var(--primary-glow);
+            transform: scale(1.05);
+        }
+
+        /* MENU CARDS & ANIMATED LIST */
+        .menu-list {
+            display: grid;
+            gap: 16px;
+        }
+
+        .card-item {
+            background: var(--card-bg) !important;
+            border: 1px solid var(--border-glass) !important;
+            border-radius: 20px;
+            padding: 16px;
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            backdrop-filter: blur(12px);
+            transition: all 0.35s var(--ease-spring);
+            position: relative;
+            overflow: hidden;
+            animation: cardAppear 0.5s var(--ease-out) both;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+
+        @keyframes cardAppear {
+            from { opacity: 0; transform: translateY(20px) scale(0.96); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .card-item:hover {
+            transform: translateY(-4px) scale(1.01);
+            border-color: rgba(251, 191, 36, 0.3) !important;
+            box-shadow: 0 12px 30px rgba(251, 191, 36, 0.15);
+        }
+
+        .card-item:active {
+            transform: scale(0.97);
+            background: rgba(30, 41, 59, 0.95) !important;
+        }
+
+        .item-avatar {
+            width: 76px;
+            height: 76px;
+            background: radial-gradient(circle, rgba(251, 191, 36, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.4rem;
+            flex-shrink: 0;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            animation: floatSmooth 3.5s ease-in-out infinite alternate;
+            box-shadow: inset 0 2px 8px rgba(255,255,255,0.1);
+        }
+
+        @keyframes floatSmooth {
+            from { transform: translateY(0px) rotate(0deg); }
+            to { transform: translateY(-6px) rotate(6deg); }
+        }
+
+        .item-content { flex-grow: 1; }
+        .item-tag {
+            font-size: 0.65rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--primary);
+            letter-spacing: 0.6px;
+            margin-bottom: 2px;
+        }
+
+        .item-title { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
+        .item-desc { font-size: 0.78rem; color: var(--text-muted); line-height: 1.35; margin-bottom: 12px; }
+
+        .item-action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price-val { font-size: 1rem; font-weight: 800; color: #fff; }
+
+        .btn-plus {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%) !important;
+            color: #000 !important;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.25s var(--ease-spring);
+            box-shadow: 0 4px 12px var(--primary-glow);
+        }
+
+        .btn-plus:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 6px 18px var(--primary-glow);
+        }
+
+        .btn-plus:active {
+            transform: scale(0.85);
+        }
+
+        /* BOTTOM SHEET MODAL WITH SMOOTH BOUNCE */
+        .sheet-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75) !important;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 200;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.35s ease;
+        }
+
+        .sheet-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .bottom-sheet {
+            width: 100%;
+            max-width: 500px;
+            background: #0f172a !important;
+            border-radius: 28px 28px 0 0;
+            border: 1px solid var(--border-glass) !important;
+            border-bottom: none;
+            padding: 24px 20px;
+            transform: translateY(100%);
+            transition: transform 0.45s var(--ease-spring);
+            box-shadow: 0 -10px 40px rgba(0,0,0,0.6);
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+
+        .sheet-overlay.active .bottom-sheet {
+            transform: translateY(0);
+        }
+
+        .sheet-grabber {
+            width: 44px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            margin: 0 auto 18px auto;
+        }
+
+        .sheet-title { font-size: 1.15rem; font-weight: 800; color: #fff; margin-bottom: 16px; }
+        .option-group-title { font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+
+        /* PILLS SELECTOR WITH SPRING TRANSITION */
+        .pill-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+
+        .pill-opt {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid var(--border-glass) !important;
+            color: var(--text-main) !important;
+            padding: 10px 14px;
+            border-radius: 14px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s var(--ease-spring);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .pill-opt:hover {
+            background: rgba(255, 255, 255, 0.09) !important;
+            transform: translateY(-2px);
+        }
+
+        .pill-opt:active { transform: scale(0.92); }
+
+        .pill-opt.selected {
+            background: rgba(251, 191, 36, 0.18) !important;
+            border-color: var(--primary) !important;
+            color: var(--primary) !important;
+            font-weight: 800;
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(251, 191, 36, 0.25);
+        }
+
+        /* DRAWER CART ANIMATIONS */
+        .drawer-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8) !important;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 210;
+            display: flex;
+            justify-content: flex-end;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.35s ease;
+        }
+
+        .drawer-overlay.active { opacity: 1; pointer-events: auto; }
+
+        .cart-drawer {
+            width: 100%;
+            max-width: 450px;
+            background: #0f172a !important;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transform: translateX(100%);
+            transition: transform 0.4s var(--ease-out);
+            box-shadow: -10px 0 40px rgba(0,0,0,0.6);
+        }
+
+        .drawer-overlay.active .cart-drawer { transform: translateX(0); }
+
+        .drawer-header { padding: 20px; border-bottom: 1px solid var(--border-glass); display: flex; justify-content: space-between; align-items: center; }
+        .drawer-body { padding: 20px; overflow-y: auto; flex-grow: 1; }
+
+        .form-input-group { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+        .form-input-group label { font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; }
+        .form-input-group input, .form-input-group textarea, .form-input-group select {
+            background: rgba(30, 41, 59, 0.7) !important;
+            border: 1px solid var(--border-glass) !important;
+            border-radius: 12px;
+            padding: 12px 14px;
+            color: #fff !important;
+            font-size: 0.88rem;
+            outline: none;
+            transition: all 0.3s var(--ease-spring);
+        }
+        .form-input-group input:focus, .form-input-group textarea:focus, .form-input-group select:focus {
+            border-color: var(--primary) !important;
+            box-shadow: 0 0 15px var(--primary-glow);
+            transform: scale(1.01);
+        }
+
+        .drawer-footer { padding: 20px; border-top: 1px solid var(--border-glass); background: rgba(15, 23, 42, 0.95); }
+
+        .btn-confirm-wa {
+            width: 100%;
+            background: #25d366 !important;
+            color: #fff !important;
+            border: none;
+            padding: 14px;
+            border-radius: 16px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+            transition: all 0.3s var(--ease-spring);
+        }
+
+        .btn-confirm-wa:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        .btn-confirm-wa:active { transform: scale(0.95); }
+
+        /* KEYFRAME HELPER ANIMATIONS */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+  
+   <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="brand">
+                <img src="ris.png" alt="Logo Haris Store" style="width: 40px; height: 40px; border-radius: 12px;">
+                <div class="brand-text">
+                    <h2>HARIS STORE</h2>
+                    <span>menjual pempek & susu jahe merah</span>
+                </div>
+            </a>
+            <div class="nav-actions">
+                <!-- Tombol Tautan DANA -->
+                <a href="https://wa.me/6285798724735?text=Halo%20Admin,%20saya%20mau%20konfirmasi%20pembayaran%20via%20DANA" target="_blank" class="dana-trigger" title="Bayar via DANA">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    <span>DANA</span>
+                </a>
+                <button class="cart-trigger" onclick="openCartDrawer()">
+                    <i data-lucide="shopping-bag" style="width: 16px;"></i>
+                    <span id="cartBadge" class="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Body -->
+    <main class="app-body">
+        <h1 class="hero-title">Mau Nikmati Kuliner Apa Hari Ini?</h1>
+        <p class="hero-sub">Pilih pempek lezat atau susu jahe merah hangat, atur selera, dan pesan langsung.</p>
+
+        <!-- Search Bar -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Cari pempek telur, susu jahe merah, STMJ..." oninput="renderMenu()">
+            <i data-lucide="search"></i>
+        </div>
+
+        <!-- Filter Category Chips -->
+        <div class="filter-scroll">
+            <button class="chip-filter active" onclick="setCategory('all', this)">Semua Menu</button>
+            <button class="chip-filter" onclick="setCategory('satuan', this)">Pempek Satuan</button>
+            <button class="chip-filter" onclick="setCategory('paket', this)">Porsi Paket</button>
+            <button class="chip-filter" onclick="setCategory('jahe', this)">Susu Jahe Merah</button>
+        </div>
+
+        <!-- Menu List Grid -->
+        <div class="menu-list" id="menuContainer"></div>
+    </main>
+
+    <!-- INTERACTIVE BOTTOM SHEET FOR VARIATION SELECTION -->
+    <div class="sheet-overlay" id="variantSheet" onclick="handleOverlayClick(event, 'variantSheet')">
+        <div class="bottom-sheet">
+            <div class="sheet-grabber"></div>
+            <h3 class="sheet-title" id="sheetProductTitle">Pilih Variasi</h3>
+
+            <!-- Dynamic Section Title & Options Container -->
+            <div id="dynamicOptionGroup">
+                <div class="option-group-title" id="optionGroupTitleLabel">Pilih Porsi / Ukuran</div>
+                <div class="pill-grid" id="portionPills"></div>
+            </div>
+
+            <!-- Conditional Section (Cuko for Pempek / Tambahan for Jahe) -->
+            <div id="secondaryOptionContainer">
+                <div class="option-group-title" id="secondaryTitleLabel">Pilihan Cuko</div>
+                <div class="pill-grid" id="secondaryPills">
+                    <button class="pill-opt selected" onclick="selectSecondaryOpt('Cuko Sedang', this)">Cuko Sedang</button>
+                    <button class="pill-opt" onclick="selectSecondaryOpt('Cuko Pedas', this)">Cuko Pedas Mantap</button>
+                    <button class="pill-opt" onclick="selectSecondaryOpt('Cuko Dipisah', this)">Cuko Dipisah</button>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <button class="chip-filter" style="flex: 1; text-align: center; border-radius: 14px; padding: 12px;" onclick="closeSheet()">Batal</button>
+                <button class="btn-plus" style="flex: 2; justify-content: center; padding: 12px; border-radius: 14px;" onclick="addToCartFromSheet()">+ Tambah ke Keranjang</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CART DRAWER -->
+    <div class="drawer-overlay" id="cartDrawer" onclick="handleOverlayClick(event, 'cartDrawer')">
+        <div class="cart-drawer">
+            <div class="drawer-header">
+                <h3 style="color: #fff; font-size: 1.1rem;">Keranjang Pesanan</h3>
+                <button style="background: none; border: none; color: var(--text-muted); cursor: pointer;" onclick="closeCartDrawer()">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <div class="drawer-body">
+                <div id="cartItemsContainer"></div>
+
+                <div class="form-input-group">
+                    <label>Nama Pemesan *</label>
+                    <input type="text" id="custName" placeholder="Contoh: Budi Prasetyo">
+
+                    <label>Alamat Pengiriman *</label>
+                    <textarea id="custAddress" rows="2" placeholder="Nama Jalan, Nomor Rumah, Patokan..."></textarea>
+
+                    <label>Metode Pembayaran</label>
+                    <select id="custPayment">
+                        <option value="DANA Non-Tunai">DANA (Non-Tunai / Tautan DANA)</option>
+                        <option value="Tunai / COD">Tunai Saat Diterima (COD)</option>
+                    </select>
+
+                    <label>Catatan Tambahan (Opsional)</label>
+                    <input type="text" id="custNotes" placeholder="Misal: Kurang manis / cuko dipisah">
+                </div>
+            </div>
+
+            <div class="drawer-footer">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                    <span style="color: var(--text-muted); font-size: 0.9rem;">Total Tagihan</span>
+                    <span id="cartTotalVal" style="font-size: 1.2rem; font-weight: 800; color: var(--primary);">Rp 0</span>
+                </div>
+                <button class="btn-confirm-wa" onclick="sendToWhatsApp()">
+                    <i data-lucide="send"></i> Kirim Pesanan via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+   <!-- JAVASCRIPT LOGIC -->
+    <script>
+        const menuData = [
+            /* PEMPEK */
+            { id: 'p-biasa', name: 'Pempek Biasa', desc: 'Pempek gurih rasa khas ikan dengan tekstur empuk & renyah.', icon: '🐟', category: 'satuan', options: [{ name: 'Satuan', price: 4000 }] },
+            { id: 'p-ikan', name: 'Pempek Daging Ikan', desc: 'Olahan daging ikan murni pilihan dengan cita rasa lebih tajam.', icon: '🐠', category: 'satuan', options: [{ name: 'Satuan', price: 4000 }] },
+            { id: 'p-telur', name: 'Pempek Telur', desc: 'Isi olahan telur gurih lembut di dalam adonan khas.', icon: '🥚', category: 'satuan', options: [{ name: 'Satuan', price: 4000 }] },
+            { id: 'pkt-12k', name: 'Porsi Paket Hemat', desc: 'Paket isi 3 pcs pempek pilihan lengkap dengan siraman cuko.', icon: '📦', category: 'paket', options: [{ name: 'Porsi Paket 3 pcs', price: 12000 }] },
+            { id: 'pkt-15k', name: 'Porsi Paket Mantap', desc: 'Paket kenyang isi 4 pcs pempek aneka varian rasa.', icon: '🍱', category: 'paket', options: [{ name: 'Porsi Paket 4 pcs', price: 15000 }] },
+            { id: 'pkt-20k', name: 'Porsi Paket Komplit', desc: 'Paket isi 5 pcs pempek campuran komplit untuk santap bersama.', icon: '🍱', category: 'paket', options: [{ name: 'Porsi Paket 5 pcs', price: 20000 }] },
+
+            /* SUSU JAHE MERAH SADULUR */
+            { id: 'jh-orig', name: 'Jahe Merah Original', desc: 'Minuman herbal jahe merah murni yang menghangatkan tubuh.', icon: '🍵', category: 'jahe', options: [{ name: 'Standard', price: 5000 }] },
+            { id: 'jh-susu', name: 'Susu Jahe Merah', desc: 'Perpaduan jahe merah hangat dengan susu pilihan yang nikmat.', icon: '🥛', category: 'jahe', options: [{ name: 'Standard', price: 7000 }] },
+            { id: 'jh-garen', name: 'Jahe Merah Gula Aren', desc: 'Jahe merah alami berpadu manisnya gula aren asli.', icon: '🍯', category: 'jahe', options: [{ name: 'Standard', price: 7000 }] },
+            { id: 'jh-garensusu', name: 'Jahe Merah G.Aren Susu', desc: 'Kombinasi jahe merah, gula aren, dan susu creamy.', icon: '☕', category: 'jahe', options: [{ name: 'Standard', price: 8000 }] },
+            { id: 'jh-madu', name: 'Jahe Merah Madu', desc: 'Jahe merah hangat diperkaya madu alami penambah vitalitas.', icon: '🍯', category: 'jahe', options: [{ name: 'Standard', price: 8000 }] },
+            { id: 'jh-madugaren', name: 'Jahe Merah Madu Gula Aren', desc: 'Nikmatnya jahe merah dengan madu dan gula aren pilihan.', icon: '🌿', category: 'jahe', options: [{ name: 'Standard', price: 8000 }] },
+            { id: 'jh-susumadu', name: 'Susu Jahe Merah Madu', desc: 'Susu jahe merah hangat ditambah madu asli berkhasiat.', icon: '🥛', category: 'jahe', options: [{ name: 'Standard', price: 8000 }] },
+            { id: 'jh-susumadugaren', name: 'Susu Jahe Merah Madu G.Aren', desc: 'Komplit susu, jahe merah, madu, dan gula aren.', icon: '✨', category: 'jahe', options: [{ name: 'Standard', price: 10000 }] },
+            { id: 'jh-telurbebek', name: 'Susu Jahe Merah Telur Bebek', desc: 'Menambah vitalitas tubuh dengan tambahan telur bebek segar.', icon: '🥚', category: 'jahe', options: [{ name: 'Standard', price: 13000 }] },
+            { id: 'jh-telurayam', name: 'Susu Jahe Merah T. Ayam Kampung', desc: 'Kesehatan dan stamina ekstra dengan telur ayam kampung.', icon: '🥚', category: 'jahe', options: [{ name: 'Standard', price: 12000 }] },
+            { id: 'jh-kecil', name: 'Susu Jahe Merah Gelas Kecil', desc: 'Porsi pas untuk kehangatan praktis sehari-hari.', icon: '🍵', category: 'jahe', options: [{ name: 'Standard', price: 5000 }] },
+            { id: 'stmjahe', name: 'Susu Telur Madu Jahe (STMJ)', desc: 'STMJ spesial pilihan Bebek atau Ayam Kampung.', icon: '🔥', category: 'jahe', options: [{ name: 'Standard Bebek/Ayam', price: 14000 }] }
+        ];
+
+        let cart = [];
+        let currentProduct = null;
+        let selectedPortion = null;
+        let selectedSecondary = 'Cuko Sedang';
+        let currentCategory = 'all';
+
+        function renderMenu() {
+            const container = document.getElementById('menuContainer');
+            const searchVal = document.getElementById('searchInput').value.toLowerCase();
+            container.innerHTML = '';
+
+            const filtered = menuData.filter(item => {
+                const matchSearch = item.name.toLowerCase().includes(searchVal) || item.desc.toLowerCase().includes(searchVal);
+                const matchCat = currentCategory === 'all' || item.category === currentCategory;
+                return matchSearch && matchCat;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = `<p style="text-align: center; color: var(--text-muted); padding: 30px 0;">Menu tidak ditemukan.</p>`;
+                return;
+            }
+
+            filtered.forEach((item, idx) => {
+                const card = document.createElement('div');
+                card.className = 'card-item';
+                card.style.animationDelay = `${idx * 0.05}s`;
+                
+                let tagText = 'Satuan';
+                if (item.category === 'paket') tagText = 'Porsi Paket';
+                if (item.category === 'jahe') tagText = 'Susu Jahe Sadulur';
+
+                card.innerHTML = `
+                    <div class="item-avatar">${item.icon}</div>
+                    <div class="item-content">
+                        <div class="item-tag">${tagText}</div>
+                        <div class="item-title">${item.name}</div>
+                        <div class="item-desc">${item.desc}</div>
+                        <div class="item-action">
+                            <div class="price-val">Rp ${item.options[0].price.toLocaleString('id-ID')}</div>
+                            <button class="btn-plus" onclick="openSheet('${item.id}')">
+                                <i data-lucide="plus" style="width: 15px;"></i> Tambah
+                            </button>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+
+            lucide.createIcons();
+        }
+
+        function setCategory(cat, btn) {
+            currentCategory = cat;
+            document.querySelectorAll('.chip-filter').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderMenu();
+        }
+
+        function openSheet(productId) {
+            currentProduct = menuData.find(p => p.id === productId);
+            document.getElementById('sheetProductTitle').innerText = currentProduct.name;
+            
+            const portionContainer = document.getElementById('portionPills');
+            portionContainer.innerHTML = '';
+            
+            currentProduct.options.forEach((opt, idx) => {
+                const isFirst = idx === 0 ? 'selected' : '';
+                if(idx === 0) selectedPortion = opt;
+                
+                portionContainer.innerHTML += `
+                    <button class="pill-opt ${isFirst}" onclick="selectPortion(${idx}, this)">
+                        ${opt.name} - Rp ${opt.price.toLocaleString('id-ID')}
+                    </button>
+                `;
+            });
+
+            const secondaryContainer = document.getElementById('secondaryPills');
+            const secondaryTitle = document.getElementById('secondaryTitleLabel');
+            secondaryContainer.innerHTML = '';
+
+            if (currentProduct.category === 'jahe') {
+                secondaryTitle.innerText = "Tambahan / Ekstra (Opsional)";
+                selectedSecondary = 'Tanpa Tambahan';
+                const extras = [
+                    { name: 'Tanpa Tambahan', price: 0 },
+                    { name: 'Tambah Madu', price: 2000 },
+                    { name: 'Tambah Telur Ayam', price: 5000 },
+                    { name: 'Tambah Telur Bebek', price: 5000 }
+                ];
+                extras.forEach((ext, idx) => {
+                    const isFirst = idx === 0 ? 'selected' : '';
+                    secondaryContainer.innerHTML += `
+                        <button class="pill-opt ${isFirst}" onclick="selectSecondaryOpt('${ext.name} (+Rp ${ext.price.toLocaleString('id-ID')})', this, ${ext.price})">
+                            ${ext.name} (+${ext.price > 0 ? 'Rp ' + ext.price.toLocaleString('id-ID') : 'Rp 0'})
+                        </button>
+                    `;
+                });
+            } else {
+                secondaryTitle.innerText = "Pilihan Cuko";
+                selectedSecondary = 'Cuko Sedang';
+                const cukos = ['Cuko Sedang', 'Cuko Pedas Mantap', 'Cuko Dipisah'];
+                cukos.forEach((cuko, idx) => {
+                    const isFirst = idx === 0 ? 'selected' : '';
+                    secondaryContainer.innerHTML += `
+                        <button class="pill-opt ${isFirst}" onclick="selectSecondaryOpt('${cuko}', this, 0)">
+                            ${cuko}
+                        </button>
+                    `;
+                });
+            }
+
+            document.getElementById('variantSheet').classList.add('active');
+        }
+
+        function closeSheet() { document.getElementById('variantSheet').classList.remove('active'); }
+        function openCartDrawer() { document.getElementById('cartDrawer').classList.add('active'); }
+        function closeCartDrawer() { document.getElementById('cartDrawer').classList.remove('active'); }
+
+        function handleOverlayClick(e, id) {
+            if (e.target.id === id) {
+                document.getElementById(id).classList.remove('active');
+            }
+        }
+
+        let extraPrice = 0;
+        function selectPortion(idx, el) {
+            selectedPortion = currentProduct.options[idx];
+            document.querySelectorAll('#portionPills .pill-opt').forEach(b => b.classList.remove('selected'));
+            el.classList.add('selected');
+        }
+
+        function selectSecondaryOpt(val, el, price = 0) {
+            selectedSecondary = val;
+            extraPrice = price;
+            document.querySelectorAll('#secondaryPills .pill-opt').forEach(b => b.classList.remove('selected'));
+            el.classList.add('selected');
+        }
+
+        function addToCartFromSheet() {
+            const finalPrice = selectedPortion.price + extraPrice;
+            const existing = cart.findIndex(item => 
+                item.id === currentProduct.id && 
+                item.portion === selectedPortion.name && 
+                item.secondary === selectedSecondary
+            );
+
+            if (existing > -1) {
+                cart[existing].qty += 1;
+            } else {
+                cart.push({
+                    id: currentProduct.id,
+                    name: currentProduct.name,
+                    portion: selectedPortion.name,
+                    price: finalPrice,
+                    secondary: selectedSecondary,
+                    qty: 1
+                });
+            }
+
+            // Animate Badge
+            const badge = document.getElementById('cartBadge');
+            badge.classList.add('bump');
+            setTimeout(() => badge.classList.remove('bump'), 400);
+
+            closeSheet();
+            updateCart();
+            openCartDrawer();
+        }
+
+        function updateCart() {
+            const container = document.getElementById('cartItemsContainer');
+            const badge = document.getElementById('cartBadge');
+            const totalVal = document.getElementById('cartTotalVal');
+
+            container.innerHTML = '';
+            let grandTotal = 0;
+            let totalQty = 0;
+
+            if (cart.length === 0) {
+                container.innerHTML = `<p style="text-align: center; color: var(--text-muted); padding: 20px 0;">Keranjang masih kosong.</p>`;
+            } else {
+                cart.forEach((item, index) => {
+                    const sub = item.price * item.qty;
+                    grandTotal += sub;
+                    totalQty += item.qty;
+
+                    container.innerHTML += `
+                        <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass); padding: 12px; border-radius: 14px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; animation: fadeInUp 0.3s ease;">
+                            <div>
+                                <strong style="color: #fff; font-size: 0.9rem;">${item.name}</strong>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">${item.portion} • ${item.secondary}</div>
+                                <div style="color: var(--primary); font-weight: 700; font-size: 0.85rem; margin-top: 4px;">Rp ${sub.toLocaleString('id-ID')}</div>
+                            </div>
+                            <div style="display: flex; gap: 8px; align-items: center; background: rgba(0,0,0,0.3); padding: 4px 8px; border-radius: 8px;">
+                                <button style="background: none; border: none; color: #fff; cursor: pointer; font-weight: bold; padding: 2px 6px;" onclick="changeQty(${index}, -1)">-</button>
+                                <span style="font-size: 0.85rem; font-weight: 700; color: #fff;">${item.qty}</span>
+                                <button style="background: none; border: none; color: #fff; cursor: pointer; font-weight: bold; padding: 2px 6px;" onclick="changeQty(${index}, 1)">+</button>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+
+            badge.innerText = totalQty;
+            totalVal.innerText = `Rp ${grandTotal.toLocaleString('id-ID')}`;
+        }
+
+        function changeQty(index, delta) {
+            cart[index].qty += delta;
+            if (cart[index].qty <= 0) cart.splice(index, 1);
+            updateCart();
+        }
+
+        function sendToWhatsApp() {
+            if (cart.length === 0) return alert('Keranjang kosong!');
+            const name = document.getElementById('custName').value.trim();
+            const address = document.getElementById('custAddress').value.trim();
+            const payment = document.getElementById('custPayment').value;
+            const notes = document.getElementById('custNotes').value.trim();
+
+            if (!name || !address) return alert('Mohon lengkapi Nama & Alamat Pengiriman.');
+
+            let msg = `*PESANAN BARU - PEMPEK HARIS & SADULUR*\n\n`;
+            msg += `• *Nama Pemesan:* ${name}\n`;
+            msg += `• *Alamat Pengiriman:* ${address}\n`;
+            msg += `• *Metode Bayar:* ${payment}\n`;
+            if (payment.includes('DANA')) {
+                msg += `  *(Tautan DANA / Non-Tunai)*\n`;
+            }
+            if (notes) msg += `• *Catatan:* ${notes}\n`;
+            msg += `\n*Detail Pesanan:*\n`;
+
+            let total = 0;
+            cart.forEach((item, i) => {
+                const sub = item.price * item.qty;
+                total += sub;
+                msg += `${i+1}. ${item.name} (${item.portion})\n   Catatan/Opsi: ${item.secondary}\n   ${item.qty}x @ Rp ${item.price.toLocaleString('id-ID')} = Rp ${sub.toLocaleString('id-ID')}\n`;
+            });
+
+            msg += `\n*TOTAL TAGIHAN: Rp ${total.toLocaleString('id-ID')}*`;
+            window.open(`https://wa.me/6285798724735?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderMenu();
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
