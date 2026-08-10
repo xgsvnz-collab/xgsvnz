@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    
+    <title>Sadulur Group - Susu Jahe Merah Racikan Sadulur</title>
+    <meta name="title" content="Sadulur Group - Susu Jahe Merah Racikan Sadulur">
+    <meta name="description" content="Nikmati kehangatan Susu Jahe Merah khas Sadulur Group. Tersedia berbagai racikan nikmat, peluang kemitraan usaha, dan pemesanan online instan.">
+    <meta name="keywords" content="Sadulur Group, Susu Jahe Merah, minuman herbal, kuliner Bogor, kemitraan susu jahe, STMJ, usaha minuman">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Sadulur Group">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sadulurgroup.com/">
+    <meta property="og:title" content="Sadulur Group - Susu Jahe Merah Racikan Sadulur">
+    <meta property="og:description" content="Susu Jahe Merah Racikan Sadulur. Cek menu eksklusif, lokasi mitra, atau daftar jadi mitra resmi Sadulur Group!">
+    <meta property="og:image" content="https://sadulurgroup.com/assets/logo.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sadulurgroup.com/">
+    <meta property="twitter:title" content="Sadulur Group - Susu Jahe Merah Racikan Sadulur">
+    <meta property="twitter:description" content="Susu Jahe Merah Racikan Sadulur. Cek menu eksklusif, lokasi mitra, atau daftar jadi mitra resmi Sadulur Group!">
+    <meta property="twitter:image" content="https://sadulurgroup.com/assets/logo.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+  <meta charset="UTF-8">
+  <meta name="color-scheme" content="dark light">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sadulur Group - Eksklusif</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    
+    :root {
+      color-scheme: dark;
+      forced-color-adjust: none;
+
+      --gold: #ff4d4d;
+      --gold-light: #ff8080;
+      --maroon: #800000;
+      --merah-hati: #4a0404;
+      --hitam-pekat: #050000;
+      --hitam-transparan: rgba(0, 0, 0, 0.55);
+      --putih: #ffffff;
+      --putih-redup: #e0e0e0;
+      --glass-border: rgba(255, 77, 77, 0.3);
+      
+    }
+.btn-maps {
+    background-color: #4285F4;
+    color: white;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.container-tombol-utama {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 10px;
+}
+
+.btn-3d {
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    perspective: 800px; 
+    width: 100%;
+}
+
+.btn-3d-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateY(4px);
+    transition: transform 0.1s ease;
+}
+
+.btn-3d-edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(to left, #2b0003 0%, #540007 8%, #540007 92%, #2b0003 100%);
+    transform: translateY(2px);
+}
+
+.btn-3d-front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    position: relative;
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--merah-hati), var(--maroon));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(-4px);
+    transition: transform 0.1s ease;
+}
+
+
+
+.btn-3d:active .btn-3d-front {
+    transform: translateY(2px);
+    transition: transform 0.03s ease;
+}
+
+.btn-3d:active .btn-3d-shadow {
+    transform: translateY(1px);
+    transition: transform 0.03s ease;
+}
+
+.btn-3d:active {
+
+}
+
+
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            
+            background: linear-gradient(135deg, var(--hitam-pekat) 0%, var(--merah-hati) 50%, var(--maroon) 100%);
+            background-attachment: fixed;
+            color: var(--putih);
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: -10%;
+            left: -10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: 480px;
+            padding: 25px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .logo-circle {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(145deg, #1a0000, #000000);
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            font-size: 28px;
+            font-weight: 700;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4), inset 0 0 10px rgba(212, 175, 55, 0.2);
+            animation: pulseGlow 2.5s infinite alternate;
+        }
+
+        .header h1 { 
+            font-size: 20px; 
+            letter-spacing: 2px; 
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--putih);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .header h2 { 
+            font-size: 13px; 
+            font-weight: 300; 
+            color: var(--gold-light);
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+
+.menu-list li {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.3s ease;
+    padding: 12px 10px;
+    border-radius: 8px;
+}
+
+
+.menu-list li:active {
+    transform: scale(0.98);
+    background: linear-gradient(135deg, #4a0404 0%, #050000 100%) !important;
+    box-shadow: inset 0 0 15px rgba(128, 0, 0, 0.6);
+}
+
+
+
+.menu-list li .ripple {
+    position: absolute;
+    background: rgba(255, 77, 77, 0.4);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-animation 0.4s linear;
+    pointer-events: none;
+}
+
+.btn-submit, button[type="submit"], .portal-card button {
+    background: linear-gradient(135deg, #ff0000 0%, #000000 100%) !important;
+    color: #ffffff !important;
+    border: 1px solid #ff4d4d !important;
+    box-shadow: 0 5px 0px #2b0003; 
+    transition: transform 0.05s ease, box-shadow 0.05s ease, background-color 0.3s ease;
+}
+
+.btn-submit:active, button[type="submit"]:active, .portal-card button:active {
+    transform: translateY(4px) !important;
+    box-shadow: 0 1px 0px #2b0003 !important;
+}
+
+.btn-submit:active, button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+        .nav-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            background: var(--hitam-transparan);
+            padding: 10px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.05);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .nav-btn {
+            background: transparent;
+            color: var(--putih-redup);
+            border: 1px solid transparent;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            flex: 1 1 40%;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .nav-btn:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
+}
+
+h1.brand-title, .logo-section h2 {
+    color: #ff0033 !important;
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+    background-clip: initial !important;
+    text-fill-color: initial !important;
+    display: inline-block;
+    text-shadow: 0 0 5px #ff0033,
+                  0 0 10px #ff0033,
+                  0 0 20px #ff0033,
+                  0 0 40px #ff3366 !important;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav-btn.active {
+    background: linear-gradient(135deg, #ff4d4d, #050000);
+    color: #ffffff;
+    border: 1px solid #ff4d4d;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+    animation: tombolPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes tombolPop {
+    0% { transform: scale(0.95); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+
+        
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+            animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .section-title {
+            color: var(--gold);
+            font-size: 15px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .section-title::before, .section-title::after {
+            content: '';
+            height: 1px;
+            width: 30px;
+            background: var(--gold);
+            opacity: 0.5;
+        }
+
+        
+        .card {
+            background: var(--hitam-transparan);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+        }
+
+        .card h3 { 
+            color: var(--gold-light); 
+            font-size: 14px; 
+            margin-bottom: 15px; 
+            font-weight: 600;
+        }
+
+        
+        .menu-list { list-style: none; }
+        
+        .menu-list li {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .menu-list li:hover {
+            padding-left: 8px;
+            color: var(--gold-light);
+            background: rgba(212, 175, 55, 0.05);
+            border-radius: 5px;
+        }
+
+        .menu-list li:last-child { border-bottom: none; }
+        
+        .price { 
+            color: var(--gold); 
+            font-weight: 600; 
+            background: rgba(212,175,55,0.1);
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        .khasiat-list { list-style: none; font-size: 12.5px; line-height: 1.8; color: var(--putih-redup);}
+        .khasiat-list li { margin-bottom: 8px; display: flex; gap: 8px;}
+        .khasiat-list li::before { content: "✔"; color: var(--gold); font-weight: bold;}
+
+        
+        .btn-order {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            text-align: center;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: 12px;
+            color: white;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-wa { background: linear-gradient(135deg, #128C7E, #25D366); box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
+        .order-row { display: flex; gap: 10px; }
+        .btn-gofood { background: linear-gradient(135deg, #008a0f, #00AA13); flex: 1;}
+        .btn-grab { background: linear-gradient(135deg, #008f40, #00B14F); flex: 1;}
+        .btn-shopee { background: linear-gradient(135deg, #d33b1e, #EE4D2D); flex: 1;}
+
+        .btn-order:hover {
+            transform: scale(1.03);
+            filter: brightness(1.1);
+        }
+
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+          .gallery-item {
+    height: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+  }
+
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            padding: 10px;
+            font-size: 11px;
+            color: var(--gold-light);
+            text-align: center;
+            font-weight: 500;
+        }
+
+        
+        .info-text { font-size: 13px; line-height: 1.7; margin-bottom: 15px; color: var(--putih-redup); }
+        
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-size: 12px; margin-bottom: 8px; color: var(--gold-light); letter-spacing: 0.5px;}
+        .form-group input {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            background: rgba(0, 0, 0, 0.4);
+            color: white;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, var(--gold), #b8860b);
+            color: var(--hitam-pekat);
+            border: none;
+            padding: 14px;
+            width: 100%;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .btn-submit:hover {
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+        }
+
+        #secret-area { display: none; }
+        
+        
+        @keyframes slideUpFade {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 10px rgba(212,175,55,0.2), inset 0 0 10px rgba(212,175,55,0.2); }
+            100% { box-shadow: 0 0 25px rgba(212,175,55,0.6), inset 0 0 15px rgba(212,175,55,0.4); }
+        }
+.logo-circle {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.btn-3d:active {
+    transform: scale(0.95);
+    transition: transform 0.05s ease;
+}
+
+.halaman-section {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: none;
+}
+
+
+.halaman-section.aktif {
+    display: block;
+    opacity: 1;
+}
+
+
+
+.btn-order.btn-wa {
+    background: linear-gradient(135deg, #128C7E 0%, #075E54 50%, var(--hitam-pekat) 100%) !important;
+}
+
+
+.btn-order.btn-gofood {
+    background: linear-gradient(135deg, #00AA13 0%, #00680C 60%, var(--hitam-pekat) 100%) !important;
+}
+
+
+.btn-order.btn-grab {
+    background: linear-gradient(135deg, #00B14F 0%, #007032 60%, var(--hitam-pekat) 100%) !important;
+}
+
+
+.btn-order.btn-shopee {
+    background: linear-gradient(135deg, #EE4D2D 0%, #A52A14 60%, var(--hitam-pekat) 100%) !important;
+}
+
+
+.btn-order.btn-maps {
+    background: linear-gradient(135deg, #4285F4 0%, #1A52B8 50%, var(--hitam-pekat) 100%) !important;
+}
+.btn-order.btn-tiktok {
+    background: linear-gradient(135deg, #010101 0%, #25F4EE 50%, var(--hitam-pekat) 100%) !important;
+}
+
+.btn-order.btn-ig {
+    background: linear-gradient(135deg, #f09433 0%, #dc2743 50%, var(--hitam-pekat) 100%) !important;
+}
+
+    
+.btn-order.btn-wa,
+.btn-order.btn-gofood,
+.btn-order.btn-grab,
+.btn-order.btn-shopee,
+.btn-order.btn-maps,
+.btn-order.btn-tiktok,
+.btn-order.btn-ig {
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 5px 0px #1a0002;
+    transition: transform 0.05s ease, box-shadow 0.05s ease;
+}
+
+    .btn-order.btn-wa:active,
+    .btn-order.btn-gofood:active,
+    .btn-order.btn-grab:active,
+    .btn-order.btn-shopee:active,
+    .btn-order.btn-maps:active 
+    .btn-order.btn-tiktok:active,
+    .btn-order.btn-ig:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0px #1a0002;
+}
+@keyframes multiColorGlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.copyright-cool {
+    text-align: center; 
+    font-size: 11px; 
+    margin-top: 25px; 
+    margin-bottom: 15px; 
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+
+    background: linear-gradient(
+        45deg, 
+        #ff3333,
+        #ffd700,
+        #ffffff,
+        #ff9900,
+        #ff3333  
+    );
+    
+    
+    background-size: 300% 300%;
+    
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: multiColorGlow 4s ease infinite;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
+}
+.card.active {
+    border: 2px solid #ff0000 !important;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+.qris-confirm-container {
+    background: var(--merah-hati);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 16px;
+    margin: 20px auto;
+    max-width: 92%;
+    color: var(--putih);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.qris-confirm-container h3 {
+    font-size: 15px;
+    color: var(--gold-light);
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.qris-confirm-container .form-group {
+    margin-bottom: 10px;
+}
+
+.qris-confirm-container label {
+    display: block;
+    font-size: 11px;
+    margin-bottom: 4px;
+    color: var(--putih-redup);
+}
+
+.qris-confirm-container input, 
+.qris-confirm-container textarea {
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    color: var(--putih);
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.qris-confirm-container input:focus, 
+.qris-confirm-container textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.btn-confirm {
+    width: 100%;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    color: var(--hitam-pekat);
+    font-weight: 700;
+    padding: 11px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-top: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: opacity 0.2s;
+}
+
+.btn-confirm:hover {
+    opacity: 0.9;
+}
+.menu-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    backdrop-filter: blur(4px);
+}
+
+.menu-modal-content {
+    background: var(--merah-hati);
+    border: 1px solid var(--glass-border);
+    padding: 22px;
+    border-radius: 16px;
+    width: 85%;
+    max-width: 320px;
+    text-align: center;
+    color: var(--putih);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    position: relative;
+    animation: modalPop 0.25s ease-out;
+}
+
+@keyframes modalPop {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--putih-redup);
+}
+
+.menu-modal-content h4 {
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: var(--putih);
+    font-weight: 600;
+}
+
+.modal-item-price {
+    color: var(--gold-light);
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.modal-action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-modal-wa {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    border: none;
+    padding: 11px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 13px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.btn-modal-cart {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    color: var(--hitam-pekat);
+    border: none;
+    padding: 11px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 13px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.menu-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.menu-modal-content {
+    background: #1a0505;
+    border: 2px solid #ff0033;
+    padding: 20px;
+    border-radius: 12px;
+    width: 85%;
+    max-width: 320px;
+    text-align: center;
+    color: white;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+.close-modal-btn {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ff0033;
+    font-weight: bold;
+}
+.modal-item-price {
+    font-size: 18px;
+    color: #ffcc00;
+    margin: 15px 0;
+    font-weight: bold;
+}
+.modal-action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+.btn-modal-wa {
+    flex: 1;
+    background: #25d366;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 12px;
+}
+.btn-modal-cart {
+    flex: 1;
+    background: #ff0033;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 12px;
+}
+.btn-confirm {
+    background: linear-gradient(135deg, #ff0033 0%, #3a0000 100%);
+    color: white;
+    border: 1px solid rgba(255, 0, 51, 0.5);
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(255, 0, 51, 0.3);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.btn-confirm:hover {
+    background: linear-gradient(135deg, #ff1a4d 0%, #520000 100%);
+}
+.search-box-container {
+    padding: 0 16px;
+    margin-bottom: 20px;
+}
+
+.search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input-wrapper input {
+    width: 100%;
+    background: rgba(20, 0, 0, 0.7);
+    border: 1px solid rgba(220, 38, 38, 0.4);
+    border-radius: 12px;
+    padding: 12px 15px 12px 42px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-input-wrapper input::placeholder {
+    color: #888;
+}
+
+.search-input-wrapper input:focus {
+    border-color: #ef4444;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+    background: rgba(30, 0, 0, 0.9);
+}
+
+.search-input-wrapper .search-icon {
+    position: absolute;
+    left: 14px;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+</style>
+
+</head>
+<body>
+  
+  <div class="app-container">
+    
+    <div class="header">
+    <div class="logo-circle">
+        <img src="sadulur-group.png" alt="Logo Sadulur Group">
+    </div>
+    <h1 style="background: linear-gradient(to right, #ff0033 0%, #ffffff 100%) !important; -webkit-background-clip: text !important; background-clip: text !important; -webkit-text-fill-color: transparent !important; color: transparent !important; text-shadow: none !important; filter: drop-shadow(0 0 6px rgba(255, 0, 51, 0.8)) !important; display: inline-block;">Sadulur Group</h1>
+    <h2 style="color: #ffffff !important; text-shadow: none !important;">Susu Jahe Merah Racikan Sadulur</h2>
+    <h2 style="background: linear-gradient(to right, #00ccff 0%, #ffffff 100%) !important; -webkit-background-clip: text !important; background-clip: text !important; -webkit-text-fill-color: transparent !important; color: transparent !important; text-shadow: none !important; filter: drop-shadow(0 0 5px rgba(0, 204, 255, 0.8)) !important; display: inline-block;">UBAR_ASUP_ANGIN</h2>
+</div>
+
+
+    <div class="nav-bar">
+    <button class="nav-btn active" onclick="openPage('page-menu', this)">📋 Menu</button>
+    <button class="nav-btn" onclick="openPage('page-galeri', this)">📸 Galeri</button>
+    <button class="nav-btn" onclick="openPage('page-kemitraan', this)">🤝 Kemitraan</button>
+    <button class="nav-btn" onclick="openPage('page-login', this)">🔒 Login</button>
+</div>
+
+
+
+
+    <div id="page-menu" class="page active">
+        <div class="section-title">DAFTAR MENU EKSKLUSIF</div>
+        
+        <div class="card">
+         <div class="search-box-container">
+    <div class="search-input-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" oninput="searchMenu()" placeholder="Cari menu favoritmu...">
+    </div>
+</div>
+            <ul class="menu-list">
+                <ul class="menu-list">
+    <li onclick="openMenuModal('Jahe Merah Original', 5000)" style="cursor: pointer;"><span>Jahe Merah Original</span> <span class="price">Rp 5.000</span></li>
+    <li onclick="openMenuModal('Susu Jahe Merah', 7000)" style="cursor: pointer;"><span>Susu Jahe Merah <span style="background: linear-gradient(to right, #ff0033, #000000); color: white; font-size: 10px; padding: 3px 8px; border-radius: 4px; margin-left: 6px; font-weight: bold; vertical-align: middle; display: inline-block; border: 1px solid rgba(255, 0, 51, 0.3);">🔥 Best Seller</span></span> <span class="price">Rp 7.000</span></li>
+    <li onclick="openMenuModal('Jahe Merah Gula Aren', 7000)" style="cursor: pointer;"><span>Jahe Merah Gula Aren</span> <span class="price">Rp 7.000</span></li>
+    <li onclick="openMenuModal('Jahe Merah Gula Aren Madu', 8000)" style="cursor: pointer;"><span>Jahe Merah Gula Aren Madu</span> <span class="price">Rp 8.000</span></li>
+    <li onclick="openMenuModal('Jahe Merah Madu', 8000)" style="cursor: pointer;"><span>Jahe Merah Madu</span> <span class="price">Rp 8.000</span></li>
+    <li onclick="openMenuModal('Jahe Merah Madu Gula Aren', 8000)" style="cursor: pointer;"><span>Jahe Merah Madu Gula Aren</span> <span class="price">Rp 8.000</span></li>
+    <li onclick="openMenuModal('Susu jahe merah madu', 12000)" style="cursor: pointer;"><span>Susu jahe merah madu <span style="background: linear-gradient(to right, #ff0033, #000000); color: white; font-size: 10px; padding: 3px 8px; border-radius: 4px; margin-left: 6px; font-weight: bold; vertical-align: middle; display: inline-block; border: 1px solid rgba(255, 0, 51, 0.3);">⭐ Favorit</span></span> <span class="price">Rp 12.000</span></li>
+    <li onclick="openMenuModal('Susu Jahe Merah Madu G.Aren', 10000)" style="cursor: pointer;"><span>Susu Jahe Merah Madu G.Aren</span> <span class="price">Rp 10.000</span></li>
+    <li onclick="openMenuModal('Susu Jahe Merah Telur Bebek', 13000)" style="cursor: pointer;"><span>Susu Jahe Merah Telur Bebek</span> <span class="price">Rp 13.000</span></li>
+    <li onclick="openMenuModal('Susu Jahe Merah Telur Ayam Kampung', 12000)" style="cursor: pointer;"><span>Susu Jahe Merah Telur Ayam Kampung </span> <span class="price">Rp 12.000</span></li>
+    <li onclick="openMenuModal('Susu Jahe Merah Gelas Kecil', 5000)" style="cursor: pointer;"><span>Susu Jahe Merah Gelas Kecil</span> <span class="price">Rp 5.000</span></li>
+    <li onclick="openMenuModal('Susu Telur Madu Jahe (STMJ)', 14000)" style="cursor: pointer;"><span>Susu Telur Madu Jahe (STMJ) <span style="background: linear-gradient(to right, #ff0033, #000000); color: white; font-size: 10px; padding: 3px 8px; border-radius: 4px; margin-left: 6px; font-weight: bold; vertical-align: middle; display: inline-block; border: 1px solid rgba(255, 0, 51, 0.3);">🔥 Best Seller</span></span> <span class="price">Rp 14.000</span></li>
+</ul>
+
+        </div>
+
+        <div class="card">
+            <h3 style="color: #ff3333;">✨ Tambahan (Add-ons)</h3>
+            <ul class="menu-list">
+                <li><span>Madu Murni</span> <span class="price">Rp 2.000</span></li>
+                <li><span>Telur Ayam Kampung</span> <span class="price">Rp 5.000</span></li>
+                <li><span>Telur Bebek</span> <span class="price">Rp 5.000</span></li>
+            </ul>
+        </div>
+<div class="card" style="text-align: center;">
+    <h3 style="color: #ff3333; margin-bottom: 12px;">⏰ Jam Operasional</h3>
+    
+    <!-- Jadwal Senin - Kamis -->
+    <div style="margin-bottom: 8px;">
+        <p style="color: #ffffff; font-weight: bold; margin: 0; font-size: 14px;">Senin – Kamis</p>
+        <p style="color: #ff3333; margin: 2px 0 0 0; font-size: 13px;">19.00 – 01.00 WIB <span style="color: #888;">(Last Order 00.55)</span></p>
+    </div>
+
+    <!-- Jadwal Jumat - Minggu -->
+    <div style="margin-bottom: 10px;">
+        <p style="color: #ffffff; font-weight: bold; margin: 0; font-size: 14px;">Jumat – Minggu</p>
+        <p style="color: #ff3333; margin: 2px 0 0 0; font-size: 13px;">19.00 – 02.00 WIB <span style="color: #888;">(Last Order 01.55)</span></p>
+    </div>
+
+    <h3 style="color: #ff3333; font-size: 13px; margin: 10px 0; font-style: italic;">Menemani Mu Di Setiap Malam</h3>
+    
+    <!-- Status Toko -->
+    <div style="margin-top: 10px; border-top: 1px solid #333; padding-top: 10px;">
+        <span id="statusToko" style="display: inline-block; padding: 4px 12px; border-radius: 15px; background: rgba(0, 255, 0, 0.1); color: #00ff00; font-size: 12px; border: 1px solid #00ff00; font-weight: bold;">
+            • Toko Sedang Buka
+        </span>
+    </div>
+</div>
+
+
+
+
+        <div class="card">
+            <h3 style="color: #ff3333;">🌿 Khasiat Utama Susu Jahe Merah</h3>
+            <ul class="khasiat-list">
+                <li>Menjaga Stamina Tubuh & Meningkatkan Kekebalan Imun.</li>
+                <li>Meredakan Masuk Angin, Perut Kembung, Batuk & Flu.</li>
+                <li>Melancarkan Peredaran Darah & Pegal Linu.</li>
+                <li>Menghangatkan Tubuh & Mengatasi Insomnia.</li>
+                <li>Menambah Stamina & Vitalitas Pria</li>
+            </ul>
+        </div>
+
+<div class="card" 
+     style="margin-bottom: 20px; text-align: center; transition: border-color 0.15s, box-shadow 0.15s;"
+     ontouchstart="this.style.borderColor='rgba(255, 74, 74, 0.8)'; this.style.boxShadow='0 0 15px rgba(255, 74, 74, 0.3)';"
+     ontouchend="this.style.borderColor=''; this.style.boxShadow='';"
+     onmousedown="this.style.borderColor='rgba(255, 74, 74, 0.8)'; this.style.boxShadow='0 0 15px rgba(255, 74, 74, 0.3)';"
+     onmouseup="this.style.borderColor=''; this.style.boxShadow='';"
+     onmouseleave="this.style.borderColor=''; this.style.boxShadow='';">
+
+    <p style="color: #ffdddd; margin-top: 0; margin-bottom: 14px; font-weight: bold; font-size: 13px; letter-spacing: 1px; text-transform: uppercase;">
+        ✨ Ikuti Media Sosial Kami ✨
+    </p>
+    
+    <div style="display: flex; gap: 12px; justify-content: space-between;">
+        <a href="https://www.tiktok.com/@ownersujamersadulurgroup?_r=1&_t=ZS-97JdCCzhb8P" target="_blank" 
+           style="flex: 1; display: block; background: linear-gradient(135deg, #000000 0%, #111111 50%, #00f2fe 100%); color: #ffffff; padding: 12px; border-radius: 10px; font-weight: bold; font-size: 13px; text-decoration: none; border: none; text-align: center; box-shadow: 0 6px 0px #002222, 0 8px 15px rgba(0,0,0,0.6); transition: all 0.1s ease-in-out; transform: translateY(0);"
+           ontouchstart="event.stopPropagation(); this.style.transform='translateY(4px)'; this.style.boxShadow='0 2px 0px #002222, 0 4px 6px rgba(0,0,0,0.6)';"
+           ontouchend="event.stopPropagation(); this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 0px #002222, 0 8px 15px rgba(0,0,0,0.6)';"
+           onmousedown="event.stopPropagation(); this.style.transform='translateY(4px)'; this.style.boxShadow='0 2px 0px #002222, 0 4px 6px rgba(0,0,0,0.6)';"
+           onmouseup="event.stopPropagation(); this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 0px #002222, 0 8px 15px rgba(0,0,0,0.6)';">
+            🎵 TikTok
+        </a>
+        <a href="https://www.instagram.com/sujamer_sadulur?igsh=ZnprN2JpeHFlNWxq" target="_blank" 
+           style="flex: 1; display: block; background: linear-gradient(135deg, #405DE6 0%, #C13584 50%, #FCAF45 100%); color: #ffffff; padding: 12px; border-radius: 10px; font-weight: bold; font-size: 13px; text-decoration: none; border: none; text-align: center; box-shadow: 0 6px 0px #511035, 0 8px 15px rgba(0,0,0,0.6); transition: all 0.1s ease-in-out; transform: translateY(0);"
+           ontouchstart="event.stopPropagation(); this.style.transform='translateY(4px)'; this.style.boxShadow='0 2px 0px #511035, 0 4px 6px rgba(0,0,0,0.6)';"
+           ontouchend="event.stopPropagation(); this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 0px #511035, 0 8px 15px rgba(0,0,0,0.6)';"
+           onmousedown="event.stopPropagation(); this.style.transform='translateY(4px)'; this.style.boxShadow='0 2px 0px #511035, 0 4px 6px rgba(0,0,0,0.6)';"
+           onmouseup="event.stopPropagation(); this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 0px #511035, 0 8px 15px rgba(0,0,0,0.6)';">
+            📸 Instagram
+        </a>
+        
+    </div>
+</div>
+
+<div class="card" style="margin-bottom: 20px;">
+    
+    <div style="text-align: center; margin-bottom: 15px; color: #ff0000; font-weight: bold;">Pesan Sekarang Secara Online</div>
+    
+    <a href="https://wa.me/6285177835893" class="btn-order btn-wa">
+        📲 Hubungi via WhatsApp
+    </a>
+    
+    <div style="display: flex; gap: 10px; justify-content: space-between; margin-top: 10px; margin-bottom: 15px;">
+<a href="https://gofood.link/a/yBnF7Kb" class="btn-order btn-gofood" style="flex: 1; text-align: center;">GoFood</a>
+
+<a href="https://r.grab.com/g/6-20260618_211201_68620be0f3e14d04a92671d2d3e77b8a_MEXMPS-6-C2VCUAMGDFXGN6" class="btn-order btn-grab" style="flex: 1; text-align: center;">GrabFood</a>
+
+<a href="https://shopee.co.id/universal-link/now-food/shop/20043192?deep_and_deferred=1&shareChannel=copy_link" class="btn-order btn-shopee" style="flex: 1; text-align: center;">ShopeeFood</a>
+
+    </div>
+
+    <a href="https://www.google.com/maps/search/?api=1&query=Racikan+Sadulur,+Jl.+Delima+No.19+Blok+S,+RT.03/RW.06,+Bogor+Kota,+16136,+Jawa+Barat,+ID" target="_blank" class="btn-order btn-maps">
+    📍 Lokasi Kami di Google Maps
+</a>
+
+<div style="margin-top: 20px; margin-bottom: 10px; padding: 15px; border: 2px dashed #ff4a4a; border-radius: 10px; background-color: rgba(255, 0, 0, 0.07); text-align: center;">
+    <p style="color: #ffffff; margin-top: 0; margin-bottom: 12px; font-weight: bold; font-size: 14px; letter-spacing: 0.5px;">
+        💳 Pembayaran Non-Tunai via QRIS
+    </p>
+    <img src="qris.jpg" alt="Pembayaran QRIS" style="width: 100%; max-width: 150px; height: auto; border-radius: 8px; display: block; margin: 10px auto; border: 4px solid white;">
+<div style="display: inline-block; width: 100%; text-align: center;">
+    <a href="#" 
+       style="display: block; background: linear-gradient(135deg, #00569e 0%, #0066ae 50%, #0088cc 100%); color: #ffffff; padding: 12px; border-radius: 10px; font-weight: bold; font-size: 13px; text-decoration: none; border: none; text-align: center; box-shadow: 0 6px 0px #003366, 0 8px 15px rgba(0,0,0,0.6); transition: all 0.1s ease-in-out; transform: translateY(0);"
+       ontouchstart="event.stopPropagation(); this.style.transform='translateY(4px)'; this.style.boxShadow='0 2px 0px #003366, 0 4px 6px rgba(0,0,0,0.6)';"
+       ontouchend="event.stopPropagation(); this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 0px #003366, 0 8px 15px rgba(0,0,0,0.6)';"
+       onmousedown="event.stopPropagation(); this.style.transform='translateY(4px)'; this.style.boxShadow='0 2px 0px #003366, 0 4px 6px rgba(0,0,0,0.6)';"
+       onmouseup="event.stopPropagation(); this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 0px #003366, 0 8px 15px rgba(0,0,0,0.6)';">
+        🔵 BCA : 0380512513 A/N MISBAH
+    </a>
+</div>
+    
+    <div class="qris-confirm-container">
+    <h3>Konfirmasi Pembayaran QRIS</h3>
+    
+    <div id="qrisForm">
+        <div class="form-group">
+            <label for="namaPemesanan">Nama Lengkap</label>
+            <input type="text" id="namaPemesanan" placeholder="Masukkan nama Anda">
+        </div>
+        <div class="form-group">
+    <label for="alamatPengiriman">Alamat Tujuan / Pemesan</label>
+    <textarea id="alamatPengiriman" rows="2" placeholder="Contoh: Jl. Pajajaran No. 45, Bogor"></textarea>
+</div>
+
+        <div class="form-group">
+            <label for="nominalTransfer">Nominal Transfer (Rp)</label>
+            <input type="number" id="nominalTransfer" placeholder="Contoh: 14000">
+        </div>
+        
+        <div class="form-group">
+            <label for="catatanPesanan">Detail Pesanan / Menu</label>
+            <textarea id="catatanPesanan" rows="2" placeholder="Contoh: STMU (1), Jahe Merah (1)"></textarea>
+        </div>
+        
+        <button type="button" class="btn-confirm" onclick="kirimQrisWa()">Kirim Konfirmasi via WhatsApp</button>
+    </div>
+</div>
+
+
+<style>
+@keyframes warnaMengalir {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.copyright-neon-flow {
+    text-align: center; 
+    font-size: 11px; 
+    margin-top: 25px; 
+    margin-bottom: 15px; 
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    font-family: sans-serif;
+    
+    background: linear-gradient(
+        90deg, 
+        #ff003c,
+        #ffffff,
+        #00d2ff,
+        #ff003c
+    );
+    
+    background-size: 300% auto;
+    
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: warnaMengalir 3s linear infinite;
+    filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.8));
+}
+</style>
+
+<p class="copyright-neon-flow">
+    &copy; SADULUR GROUP 2020. All Rights Reserved.
+</p>
+
+</div>
+
+    <p style="text-align: center; font-size: 11px; color: #888888; margin-top: 20px; margin-bottom: 10px; letter-spacing: 1px;"></p>
+</div>
+</div>
+
+<div id="page-galeri" class="page">
+    <div class="section-title">VISUAL PRODUK KAMI</div>
+
+
+    <div class="gallery">
+              <div class="gallery-item">
+        <img src="menu_1.jpg" alt="Menu 1">
+        <div class="gallery-caption"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="menu_2.jpg" alt="Menu 2">
+        <div class="gallery-caption"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="menu_3.jpg" alt="Menu 3">
+        <div class="gallery-caption"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="menu_4.jpg" alt="Menu 4">
+        <div class="gallery-caption"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="menu_5.jpg" alt="Menu 5">
+        <div class="gallery-caption"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="menu_6.jpg" alt="Menu 6">
+        <div class="gallery-caption"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="menu_7.jpg" alt="Menu 7">
+        <div class="gallery-caption"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="menu_8.jpg" alt="Menu 8">
+        <div class="gallery-caption"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="menu_9.jpg" alt="Menu 9">
+        <div class="gallery-caption"></div>
+      </div>
+        <div class="gallery-item">
+            <img src="menu_10.jpg" alt="Menu 10">
+            <div class="gallery-caption"></div>
+        </div>
+
+    </div>
+    
+</div>
+<div id="page-kemitraan" class="page">
+    <div class="section-title">GABUNG MITRA EKSKLUSIF</div>
+    
+    <div class="card"> 
+        <h3 style="color: #ff4d4d; margin-bottom: 15px; font-weight: bold;">Peluang Bisnis Menguntungkan</h3>
+
+        <p class="info-text">
+            Jadilah bagian dari keluarga besar Sadulur Group. Saat ini kami telah dipercaya oleh lebih dari <strong>21 Mitra aktif</strong> di berbagai wilayah.
+        </p>
+        
+        <p class="info-text">
+            <strong style="color:var(--gold);">Kenapa Harus Kami?</strong><br>
+            ✨ Resep rahasia jahe merah yang sudah terbukti laku.<br>
+            ✨ Branding eksklusif dan sudah dikenal luas.<br>
+            ✨ Bahan baku disuplai langsung 100%.<br>
+            ✨ Potensi ROI (Balik Modal) sangat cepat.
+        </p>
+<details style="background: rgba(255, 255, 255, 0.05); padding: 12px; border-radius: 8px; margin: 20px 0; text-align: left; border: 1px solid rgba(255, 255, 255, 0.1);">
+    <summary style="color: var(--gold); cursor: pointer; font-weight: bold; outline: none; font-size: 15px;">
+        📍 Lokasi Mitra Kami
+    </summary>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; color: #ffffff; font-size: 13px; margin-top: 12px; padding-left: 5px; line-height: 1.4;">
+        <div>• Cipaku Pusat</div>
+        <div>• Cabang Pakuan</div>
+        <div>• Cabang Pancasan</div>
+        <div>• Mitra Ponbit</div>
+        <div>• Mitra Pamoyanan</div>
+        <div>• Mitra Pabuaran</div>
+        <div>• Mitra Harja Sari</div>
+        <div>• Mitra Bohlam</div>
+        <div>• Mitra Taman Sari</div>
+        <div>• Mitra Cifor</div>
+        <div>• Mitra SBJ - Bubulak</div>
+        <div>• Mitra Cibogel</div>
+        <div>• Mitra Sindang Barang</div>
+        <div>• Mitra Puncak</div>
+        <div>• Mitra Warung Nangka</div>
+        <div>• Mitra Pabuaran 2</div>
+        <div>• Mitra Sukasari</div>
+        <div>• Mitra Ciapus</div>
+        <div>• Mitra Cimande</div>
+        <div>• Mitra Warung Nangka 2</div>
+        <div>• Mitra Parakan</div>
+    </>
+</details>
+
+        <a href="https://wa.me/6285177835893" class="btn-submit" style="text-decoration: none; display: inline-block; background: linear-gradient(135deg, #128C7E, #25D366); color:white; text-align: center; line-height: normal; padding: 10px 20px;">
+            📱 Hubungi Owner (WhatsApp)
+        </a>
+    </div>
+    </div>
+
+                <div id="page-login" class="page">
+        <div class="section-title">PORTAL KHUSUS MITRA</div>
+        
+        <div id="login-form" class="card">
+            <div class="auth-tabs" style="display: flex; justify-content: space-around; margin-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+                <span id="tab-login" class="tab-item active" onclick="switchAuthTab('login')" style="cursor: pointer; font-weight: bold; color: white; border-bottom: 3px solid #ff4d4d; padding-bottom: 10px; width: 50%; text-align: center;">Masuk</span>
+                <span id="tab-register" class="tab-item" onclick="switchAuthTab('register')" style="cursor: pointer; font-weight: bold; color: var(--putih-redup); padding-bottom: 10px; width: 50%; text-align: center;">Daftar</span>
+            </div>
+
+            <div id="login-area">
+                <p style="font-size: 12px; margin-bottom: 20px; color: var(--putih-redup); text-align: center;">
+                    Silakan login menggunakan ID Mitra Anda untuk mengakses Data SOP dan Racikan Rahasia.
+                </p>
+
+                <div class="form-group">
+                    <label>ID Mitra</label>
+                    <input type="text" id="username" placeholder="Masukkan ID Mitra Anda...">
+                </div>
+
+                <div class="form-group">
+                    <label>Kata Sandi (Password)</label>
+                    <input type="password" id="password" placeholder="........">
+                </div>
+
+                <button class="btn-submit" onclick="loginMitra()">🔒 Masuk Portal</button>
+                
+                <p id="login-error" style="color: #ff4d4d; font-size: 12px; display: none; margin-top: 15px; text-align: center; font-weight: bold;">❌ ID atau Password tidak valid!</p>
+            </div>
+
+            <div id="register-area" style="display: none;">
+                <p style="font-size: 12px; margin-bottom: 20px; color: var(--putih-redup); text-align: center;">
+                    Isi data di bawah ini untuk mendaftarkan akun Mitra Baru pilihan Anda.
+                </p>
+
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" id="reg-nama" placeholder="Nama lengkap Anda...">
+                </div>
+
+                <div class="form-group">
+                    <label>NIK (No. KTP)</label>
+                    <input type="number" id="reg-nik" placeholder="16 digit Nomor Induk Kependudukan...">
+                </div>
+
+                <div class="form-group">
+                    <label>Email Aktif</label>
+                    <input type="email" id="reg-email" placeholder="Contoh: nama@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label>No. WhatsApp</label>
+                    <input type="text" id="reg-whatsapp" placeholder="Contoh: 0812345xxxxx">
+                </div>
+
+                <div class="form-group">
+                    <label>Kota / Wilayah</label>
+                    <input type="text" id="reg-kota" placeholder="Kota domisili Anda...">
+                </div>
+
+                <div class="form-group" style="border-top: 1px dashed rgba(255,255,255,0.2); padding-top: 15px; margin-top: 15px;">
+                    <label style="color: var(--gold);">Buat ID Mitra (Username Anda)</label>
+                    <input type="text" id="reg-custom-id" placeholder="Contoh: mitrasadulur2">
+                </div>
+
+                <div class="form-group">
+                    <label style="color: var(--gold);">Buat Kata Sandi (Password Anda)</label>
+                    <input type="password" id="reg-custom-pass" placeholder="Minimal 10 karakter...">
+                </div>
+
+                <button class="btn-submit" onclick="ajukanKemitraan()" style="background: linear-gradient(135deg, #25D366, #128C7E);">📝 Kirim Data & Daftarkan Akun</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-mitra-internal" class="page" style="display: none;">
+        <div class="section-title">PORTAL INTERNAL MITRA</div>
+        
+        <div class="card">
+            <div style="line-height: 1.8; color: white; font-size: 13px;">
+                <strong style="color:var(--gold);">1. Standar Operasional Prosedur (SOP):</strong><br>
+                • Menjaga kebersihan area seduh dan wadah saji.<br>
+                • Memastikan kualitas air tetap panas optimal.<br><br>
+
+                <strong style="color:var(--gold);">2. Formula & Racikan Rahasia:</strong><br>
+                • Takaran es batu dan komposisi susu jahe merah premium 1:1.<br><br>
+
+                <strong style="color:var(--gold);">3. Harga Suplai Bahan Baku:</strong><br>
+                • Serbuk Jahe (1 Kg): Rp XX.000<br>
+                • Gula Aren Cair Premium: Rp XX.000
+                        <br><br>
+        <strong style="color:var(--gold);">4. Pilihan Paket Kemitraan Anda:</strong><br>
+
+        <div style="margin-top: 10px; border-left: 3px solid var(--gold); padding-left: 10px; margin-bottom: 20px;">
+            <span style="color: #ff4d4d; font-weight: bold;">Paket 1 (Full Kemitraan)</span><br>
+            
+            <div style="margin: 10px 0; background: #ffffff; padding: 8px; border-radius: 6px; text-align: center;">
+                <img src="full_mitra.jpg" alt="Gerobak Full Kemitraan" style="width: 100%; max-width: 250px; height: auto; border-radius: 4px;"><br>
+                <span style="color: #333333; font-size: 11px; font-weight: bold; display: block; margin-top: 5px;">UKURAN: 120cm X 180cm</span>
+            </div>
+
+            • Grobak sesuai gambar<br>
+            • Banner dan Stiker<br>
+            • Kaos Sujamer<br>
+            • 3 Paket Racikan<br>
+            • Siap jualan<br>
+            <em style="color:var(--gold); font-weight: bold;">Harga : Rp. 7,500,000,-</em>
+        </div>
+
+        <div style="margin-top: 15px; border-left: 3px solid var(--gold); padding-left: 10px; margin-bottom: 20px;">
+            <span style="color: #ff4d4d; font-weight: bold;">Paket 2 (Helf Kemitraan)</span><br>
+            
+            <div style="margin: 10px 0; background: #ffffff; padding: 8px; border-radius: 6px; text-align: center;">
+                <img src="setengah.jpg" alt="Gerobak Helf Kemitraan" style="width: 100%; max-width: 250px; height: auto; border-radius: 4px;"><br>
+                <span style="color: #333333; font-size: 11px; font-weight: bold; display: block; margin-top: 5px;">UKURAN: 120cm X 60cm</span>
+            </div>
+
+            • Grobak Sesuai gambar<br>
+            • Banner dan Stiker<br>
+            • Kaos Sujamer<br>
+            • 2 Paket Racikan<br>
+            • Siap Jualan<br>
+            <em style="color:var(--gold); font-weight: bold;">Harga : Rp. 4,500,000,-</em>
+        </div>
+
+        <div style="margin-top: 15px; border-left: 3px solid var(--gold); padding-left: 10px;">
+            <span style="color: #ff4d4d; font-weight: bold;">Paket 3 (Brand Only)</span><br>
+            
+            <div style="margin: 10px 0; background: #ffffff; padding: 8px; border-radius: 6px; text-align: center;">
+                <img src="brand.jpg" alt="Brand Only" style="width: 100%; max-width: 250px; height: auto; border-radius: 4px;"><br>
+                <span style="color: #333333; font-size: 11px; font-weight: bold; display: block; margin-top: 5px;">SADULUR GROUP</span>
+            </div>
+
+            • Grobak siapin sendiri<br>
+            • Perlengkapan Sendiri<br>
+            • Banner dan Stiker<br>
+            • Kaos Sujamer<br>
+            • 1 Paket Racikan<br>
+            • Siap Jualan<br>
+            <em style="color:var(--gold); font-weight: bold;">Harga : Rp. 1,500,000,-</em>
+        </div>
+
+            </div>
+            <button class="btn-submit" style="background: linear-gradient(135deg, #d33b1e, #8a0303); color: white; margin-top: 15px;" onclick="logoutMitra()">Keluar Portal</button>
+        </div>
+
+        <div class="card" style="margin-top: 20px; border-top: 2px solid var(--gold);">
+            <div style="color: var(--gold); font-weight: bold; font-size: 14px; margin-bottom: 15px;">🔒 Pengaturan Akun (Ganti Password)</div>
+            <div class="form-group">
+                <label>Masukkan Kata Sandi Baru</label>
+                <input type="password" id="new-password" placeholder="Minimal 10 karakter...">
+            </div>
+            <button class="btn-submit" style="background: linear-gradient(135deg, #ffc107, #ff9800); color: black; font-weight: bold;" onclick="gantiPasswordMitra()">💾 Simpan Password Baru</button>
+        </div>
+    </div>
+
+</div> <script>
+function openPage(pageId) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => {
+        page.style.display = 'none';
+    });
+
+    const targetPage = document.getElementById(pageId);
+    if (targetPage) {
+        targetPage.style.display = 'block';
+    }
+}
+
+function switchAuthTab(type) {
+    const loginArea = document.getElementById('login-area');
+    const registerArea = document.getElementById('register-area');
+    const tabLogin = document.getElementById('tab-login');
+    const tabRegister = document.getElementById('tab-register');
+
+    if (type === 'login') {
+        loginArea.style.display = 'block';
+        registerArea.style.display = 'none';
+        tabLogin.style.color = 'white';
+        tabLogin.style.borderBottom = '3px solid #ff4d4d';
+        tabRegister.style.color = 'var(--putih-redup)';
+        tabRegister.style.borderBottom = 'none';
+    } else {
+        loginArea.style.display = 'none';
+        registerArea.style.display = 'block';
+        tabRegister.style.color = 'white';
+        tabRegister.style.borderBottom = '3px solid #ff4d4d';
+        tabLogin.style.color = 'var(--putih-redup)';
+        tabLogin.style.borderBottom = 'none';
+    }
+}
+
+function loginMitra() {
+    const user = document.getElementById('username').value.trim().toLowerCase();
+    const pass = document.getElementById('password').value.trim();
+    const errorMsg = document.getElementById('login-error');
+
+    if (user === 'mitrasadulur' && pass === 'sadulur123') {
+        errorMsg.style.display = 'none';
+        localStorage.setItem('session_active', user);
+        localStorage.setItem('user_' + user, JSON.stringify({ fullName: "Mitra Resmi Sadulur" }));
+        openPage('page-mitra-internal');
+        return;
+    }
+
+    const akunLokal = localStorage.getItem('mitra_auth_' + user);
+    if (akunLokal) {
+        const dataAkun = JSON.parse(akunLokal);
+        if (dataAkun.password === pass) {
+            errorMsg.style.display = 'none';
+            localStorage.setItem('session_active', user);
+            localStorage.setItem('user_' + user, JSON.stringify({ fullName: dataAkun.nama }));
+            openPage('page-mitra-internal');
+            return;
+        }
+    }
+
+    errorMsg.style.display = 'block';
+}
+
+function logoutMitra() {
+    localStorage.removeItem('session_active');
+    document.getElementById('username').value = '';
+    document.getElementById('password').value = '';
+    openPage('page-login');
+}
+
+function ajukanKemitraan() {
+    const nama = document.getElementById('reg-nama').value.trim();
+    const nik = document.getElementById('reg-nik').value.trim();
+    const email = document.getElementById('reg-email').value.trim();
+    const wa = document.getElementById('reg-whatsapp').value.trim();
+    const kota = document.getElementById('reg-kota').value.trim();
+    const customId = document.getElementById('reg-custom-id').value.trim().toLowerCase();
+    const customPass = document.getElementById('reg-custom-pass').value.trim();
+    if(!nama || !nik || !email || !wa || !kota || !customId || !customPass) {
+        alert('Mohon isi semua data pendaftaran dengan lengkap!');
+        return;
+    }
+
+    if(nik.length !== 16) {
+        alert('Pendaftaran Gagal: NIK harus berjumlah tepat 16 digit!');
+        return;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!emailPattern.test(email)) {
+        alert('Pendaftaran Gagal: Format Email tidak valid!');
+        return;
+    }
+
+    if(customPass.length < 6) {
+        alert('Pendaftaran Gagal: Kata sandi minimal harus 6 karakter!');
+        return;
+    }
+
+    if(customId === 'mitrasadulur' || localStorage.getItem('mitra_auth_' + customId)) {
+        alert('Pendaftaran Gagal: ID Mitra tersebut sudah terpakai, gunakan nama ID lain!');
+        return;
+    }
+
+    const dataPendaftar = {
+        id: customId,
+        password: customPass,
+        nama: nama,
+        nik: nik,
+        email: email,
+        wa: wa,
+        kota: kota
+    };
+    localStorage.setItem('mitra_auth_' + customId, JSON.stringify(dataPendaftar));
+
+    const pesan = `Halo Owner Sadulur Group, saya mendaftar sebagai mitra baru.%0A%0ANama: ${nama}%0ANIK: ${nik}%0AEmail: ${email}%0AWhatsApp: ${wa}%0AKota: ${kota}%0AID Usulan Login: ${customId}`;
+    window.open(`https://wa.me/6285177835893?text=${pesan}`, '_blank');
+
+    alert('Pendaftaran Sukses! Akun langsung aktif. Silakan beralih ke tab "Masuk" untuk login menggunakan ID & password baru Anda.');
+    switchAuthTab('login');
+}
+
+function gantiPasswordMitra() {
+    const activeUser = localStorage.getItem('session_active');
+    const newPass = document.getElementById('new-password').value.trim();
+
+    if(!newPass || newPass.length < 6) {
+        alert('Kata sandi baru minimal harus 6 karakter!');
+        return;
+    }
+
+    if(activeUser === 'mitrasadulur') {
+        alert('Akun Master bawaan tidak dapat diubah password-nya melalui web lokal!');
+        return;
+    }
+
+    const akunLokal = localStorage.getItem('mitra_auth_' + activeUser);
+    if(akunLokal) {
+        const dataAkun = JSON.parse(akunLokal);
+        dataAkun.password = newPass;
+        localStorage.setItem('mitra_auth_' + activeUser, JSON.stringify(dataAkun));
+        
+        alert('🔒 Sukses! Kata sandi akun Anda berhasil diperbarui. Gunakan password baru ini saat login selanjutnya.');
+        document.getElementById('new-password').value = '';
+    } else {
+        alert('Gagal mendeteksi sesi pendaftaran akun.');
+    }
+}
+
+function buatPostingan() {
+    const text = document.getElementById('post-text').value;
+    const mediaFile = document.getElementById('post-media').files[0];
+    const activeUser = localStorage.getItem('session_active');
+
+    if (!text && !mediaFile) {
+        alert("Postingan tidak boleh kosong!");
+        return;
+    }
+
+    const userData = JSON.parse(localStorage.getItem('user_' + activeUser));
+
+    const postBaru = {
+        id: Date.now(),
+        username: activeUser || 'guest',
+        fullName: userData ? userData.fullName : 'Mitra Sadulur',
+        text: text,
+        media: '',
+        mediaType: '',
+        timestamp: new Date().toLocaleString('id-ID', { hour: '2-digit', minute: '2-digit', day: 'numeric', month: 'short' })
+    };
+
+    alert('Postingan berhasil dibuat!');
+    document.getElementById('post-text').value = '';
+}
+</script>
+<script>
+    const tombolNavigasi = document.querySelectorAll('.nav-btn');
+
+    tombolNavigasi.forEach(tombol => {
+        tombol.addEventListener('click', function() {
+            const tombolAktifSaatIni = document.querySelector('.nav-btn.active');
+            if (tombolAktifSaatIni) {
+                tombolAktifSaatIni.classList.remove('active');
+            }
+            
+            this.classList.add('active');
+        });
+    });
+const listMenu = document.querySelectorAll('.menu-list li');
+
+listMenu.forEach(menu => {
+    menu.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+        
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const size = Math.max(rect.width, rect.height);
+        ripple.style.width = ripple.style.height = `${size}px`;
+        ripple.style.left = `${x - size / 2}px`;
+        ripple.style.top = `${y - size / 2}px`;
+        
+        this.appendChild(ripple);
+        
+        ripple.addEventListener('animationend', () => {
+            ripple.remove();
+        });
+    });
+});
+
+</script>
+<script>
+function searchMenu() {
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let menuItems = document.querySelectorAll('.menu-list li');
+    
+    menuItems.forEach(item => {
+        let text = item.textContent.toLowerCase();
+        
+        if (text.includes(input)) {
+            item.style.display = "";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
+</script>
+<div id="menuModal" class="menu-modal-overlay">
+    <div class="menu-modal-content">
+        <span class="close-modal-btn" onclick="closeMenuModal()">&times;</span>
+        <h4 id="modalName">Nama Menu</h4>
+        <div id="modalPrice" class="modal-item-price">Rp 0</div>
+        
+        <div class="modal-action-buttons">
+            <button type="button" class="btn-modal-wa" onclick="orderNowFromModal()">⚡ Pesan Sekarang</button>
+            <button type="button" class="btn-modal-cart" onclick="addToCartFromModal()">🛒 Masukkan Keranjang</button>
+        </div>
+    </div>
+</div>
+
+<script>
+let selectedMenuName = "";
+let selectedMenuPrice = 0;
+
+function openMenuModal(name, price) {
+    selectedMenuName = name;
+    selectedMenuPrice = parseInt(price);
+    
+    document.getElementById('modalName').textContent = name;
+    document.getElementById('modalPrice').textContent = 'Rp ' + selectedMenuPrice.toLocaleString('id-ID');
+    document.getElementById('menuModal').style.display ='flex';
+}
+
+function closeMenuModal() {
+    document.getElementById('menuModal').style.display = 'none';
+}
+
+function orderNowFromModal() {
+    const phoneNumber = "62814024526974";
+    const message = `Halo Admin Sadulur Group,%0A%0ASaya ingin memesan:%0A- *${selectedMenuName}* (1x) seharga Rp ${selectedMenuPrice.toLocaleString('id-ID')}%0A%0AMohon segera diproses ya, terima kasih!`;
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+    closeMenuModal();
+}
+
+function addToCartFromModal() {
+    alert(`${selectedMenuName} berhasil dimasukkan ke keranjang!`);
+    closeMenuModal();
+}<!-- Modal Interaksi Menu -->
+<div id="menuModal" class="menu-modal-overlay">
+    <div class="menu-modal-content">
+        <span class="close-modal-btn" onclick="closeMenuModal()">&times;</span>
+        <h4 id="modalName">Nama Menu</h4>
+        <div id="modalPrice" class="modal-item-price">Rp 0</div>
+        
+        <div class="modal-action-buttons">
+            <button type="button" class="btn-modal-wa" onclick="orderNowFromModal()">⚡ Pesan Sekarang</button>
+            <button type="button" class="btn-modal-cart" onclick="addToCartFromModal()">🛒 Masukkan Keranjang</button>
+        </div>
+    </div>
+</div>
+<script>
+    function kirimQrisWa() {
+        const nama = document.getElementById('namaPemesanan').value;
+        const nominal = document.getElementById('nominalTransfer').value;
+        const catatan = document.getElementById('catatanPesanan').value;
+
+        if (!nama || !nominal || !catatan) {
+            alert('Mohon isi semua data konfirmasi terlebih dahulu!');
+            return;
+        }
+
+        const pesan = `Halo Admin Sadulur Group, saya ingin konfirmasi pembayaran QRIS:\n\n*Nama:* ${nama}\n*Nominal Transfer:* Rp ${parseInt(nominal).toLocaleString('id-ID')}\n*Detail Pesanan:* ${catatan}\n\nMohon segera dicek ya. Terima kasih!`;
+        
+        const url = `https://wa.me/6285177835893?text=` + encodeURIComponent(pesan);
+        window.open(url, '_blank');
+    }
+</script>
+<script>
+    function kirimQrisWa() {
+    const nama = document.getElementById('namaPemesanan').value;
+    const alamat = document.getElementById('alamatPengiriman').value;
+    const nominal = document.getElementById('nominalTransfer').value;
+    const catatan = document.getElementById('catatanPesanan').value;
+
+    if (!nama || !alamat || !nominal || !catatan) {
+        alert('Mohon isi semua data konfirmasi terlebih dahulu!');
+        return;
+    }
+
+    const pesan = `Halo Admin Sadulur Group, saya ingin konfirmasi pembayaran QRIS:\n\n*Nama* : ${nama}\n*Alamat* : ${alamat}\n*Nominal Transfer* : Rp ${parseInt(nominal).toLocaleString('id-ID')}\n*Detail Pesanan* : ${catatan}\n\nMohon segera dicek ya. Terima kasih!`;
+
+    const url = `https://wa.me/6285177835893?text=` + encodeURIComponent(pesan);
+    window.open(url, '_blank');
+}
+function cekStatusToko() {
+    const now = new Date();
+    // Mengambil nama hari & jam lokal Asia/Jakarta
+    const options = { timeZone: 'Asia/Jakarta', hour12: false };
+    const formatter = new Intl.DateTimeFormat('en-US', { ...options, weekday: 'short', hour: 'numeric', minute: 'numeric' });
+    const parts = formatter.formatToParts(now);
+    
+    const day = parts.find(p => p.type === 'weekday').value; // Sun, Mon, Tue, Wed, Thu, Fri, Sat
+    const jam = parseInt(parts.find(p => p.type === 'hour').value);
+    const menit = parseInt(parts.find(p => p.type === 'minute').value);
+    const totalMenit = jam * 60 + menit;
+
+    const statusEl = document.getElementById('statusToko');
+    if (!statusEl) return;
+
+    let isBuka = false;
+    if (totalMenit >= 19 * 60) {
+        isBuka = true;
+    } 
+    else if (totalMenit < 3 * 60) {
+        if (['Tue', 'Wed', 'Thu', 'Fri'].includes(day)) {
+            isBuka = totalMenit < 1 * 60;
+        } else if (['Sat', 'Sun', 'Mon'].includes(day)) {
+            isBuka = totalMenit < 2 * 60;
+        }
+    }
+
+    if (isBuka) {
+        statusEl.innerHTML = "• Toko Sedang Buka";
+        statusEl.style.borderColor = "#00ff00";
+        statusEl.style.color = "#00ff00";
+        statusEl.style.background = "rgba(0, 255, 0, 0.1)";
+    } else {
+        statusEl.innerHTML = "🔴 TUTUP";
+        statusEl.style.borderColor = "#ef4444";
+        statusEl.style.color = "#ef4444";
+        statusEl.style.background = "rgba(239, 68, 68, 0.1)";
+    }
+}
+
+window.addEventListener('DOMContentLoaded', cekStatusToko);
+
+</script>
+
+</script>
+
+</body>
+</html>
